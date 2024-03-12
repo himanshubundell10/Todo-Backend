@@ -24,7 +24,7 @@ const port = process.env.PORT
 
 
 mongoose
-    .connect("mongodb://localhost:27017", {
+    .connect(process.env.MONGO_URI, {
         dbName: "backendapi",
     }).then((c) => console.log(`db cnnected with ${c.connection.host}`))
     .catch((e) => console.log(console.log(e)))
