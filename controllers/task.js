@@ -21,7 +21,7 @@ try {
 }
 
 // get my task
-export const getMyTask = async (req, res) => {
+export const getMyTask = async (req, res,next) => {
 
   try {
     const {_id}  = req.user
